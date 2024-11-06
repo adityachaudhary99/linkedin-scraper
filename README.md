@@ -80,6 +80,12 @@ RapidAPI-key
 #### Using Docker
 Build and run the Docker container as follows:
 
+Start redis:
+
+```bash
+docker compose up -d
+```
+
 Build the Docker image:
 
 ```bash
