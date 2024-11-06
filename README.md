@@ -72,7 +72,9 @@ poetry install
 Edit the config.ini file to set the necessary configurations:
 
 LinkedIn_Credentials: LinkedIn username and password
+
 edgedriver_path: Path to the Edge WebDriver (Docker handles this path)
+
 RapidAPI-key
 
 
