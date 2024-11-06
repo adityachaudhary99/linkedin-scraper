@@ -12,23 +12,41 @@ This project is a LinkedIn web scraper designed to gather LinkedIn posts from us
 ## Project Structure
 
 linkedin-crawler/
+
 ├── crawler/
+
 │   ├── __init__.py
+
 │   ├── crawler.py               # Main crawler logic
+
 │   ├── driver_setup.py          # initialize the driver
+
 │   ├── config.ini               # Configuration file
+
 │   ├── post_scraper.py          # get post data using api
+
 │   ├── profile_scraper.py       # Scraping profiles and push to queue
+
 │   └── storage_handler.py       # save post and profile data as json
+
 ├── data/
+
 │   ├── posts.json, posts_new.json           # Scraped posts data
+
 │   └── profiles.json, profiles_new.json     # Scraped profile data
+
 ├── analysis/
+
 │   └── analysis.ipynb           # Jupyter Notebook for analysis
+
 ├── Dockerfile                   # Docker setup for the project
+
 ├── docker-compose.yaml          # Docker compose file for redis setup
+
 ├── README.md                    # Detailed setup and usage instructions
+
 ├── poetry.lock                  # Poetry lockfile
+
 └── pyproject.toml               # Poetry dependencies and project configuration
 
 ---
@@ -114,9 +132,13 @@ This will open the notebook where you can run cells for data analysis.
 The scraper uses an Object-Oriented structure for flexibility and modularity. Key components include:
 
 crawler.py: The entry point, initializes the scraping process and manages the queue of profiles.
+
 profile_scraper.py: Manages interactions with LinkedIn using Selenium and Edge WebDriver.
+
 post_scraper.py: Gets post data for user profiles using Rapid API.
+
 storage_handler.py: Responsible for saving scraped data to JSON files.
+
 queue_handler.py: Responsible for handling profile URL queues.
 
 The crawler uses a queue to handle profile URLs, managing depth-first traversal to reach the specified limit of profiles.
