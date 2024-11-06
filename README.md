@@ -90,7 +90,7 @@ poetry install
 Run the crawler:
 
 ```bash
-poetry run python crawler/crawler.py
+poetry run python crawler.py
 ```
 
 
@@ -109,3 +109,14 @@ jupyter notebook analysis/analysis.ipynb
 
 This will open the notebook where you can run cells for data analysis.
 
+
+## Crawler Design
+The scraper uses an Object-Oriented structure for flexibility and modularity. Key components include:
+
+crawler.py: The entry point, initializes the scraping process and manages the queue of profiles.
+profile_scraper.py: Manages interactions with LinkedIn using Selenium and Edge WebDriver.
+post_scraper.py: Gets post data for user profiles using Rapid API.
+storage_handler.py: Responsible for saving scraped data to JSON files.
+queue_handler.py: Responsible for handling profile URL queues.
+
+The crawler uses a queue to handle profile URLs, managing depth-first traversal to reach the specified limit of profiles.
