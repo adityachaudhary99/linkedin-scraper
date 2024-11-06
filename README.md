@@ -82,25 +82,11 @@ RapidAPI-key
 #### Using Docker
 Build and run the Docker container as follows:
 
-Start redis:
-
 ```bash
-docker compose up -d
+docker compose up --build
 ```
 
-Build the Docker image:
-
-```bash
-docker build -t linkedin-crawler .
-```
-
-Run the container:
-
-```bash
-docker run linkedin-crawler
-```
-
-This will initiate the crawler, scrape profiles and posts, and store them in data/posts_new.json and data/profiles_new.json.
+This will initiate the redis and the crawler, scrape profiles and posts, and store them in data/posts_new.json and data/profiles_new.json.
 
 
 
