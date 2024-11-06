@@ -1,7 +1,7 @@
 import json
 
 class StorageHandler:
-    def __init__(self, profile_file="profiles_new.json", posts_file="posts_new.json"):
+    def __init__(self, profile_file="data/profiles_new.json", posts_file="data/posts_new.json"):
         self.profile_file = profile_file
         self.posts_file = posts_file
 
